@@ -2,7 +2,7 @@ set(LIBNAME startup)
 
 
 add_library(${LIBNAME}
-    startup.cpp
+    ${LIBNAME}.cpp
 )
 
 target_include_directories(${LIBNAME}
