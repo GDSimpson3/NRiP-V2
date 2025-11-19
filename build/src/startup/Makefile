@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gavinsimpson/Documents/dev/cmake-example-main/build/CMakeFiles /Users/gavinsimpson/Documents/dev/cmake-example-main/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/gavinsimpson/Documents/dev/cmake-example-main/build/CMakeFiles /Users/gavinsimpson/Documents/dev/cmake-example-main/build/src/startup//CMakeFiles/progress.marks
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/startup/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gavinsimpson/Documents/dev/cmake-example-main/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/startup/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/startup/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/startup/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named nrip2
+# Convenience name for target.
+src/startup/CMakeFiles/startup.dir/rule:
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/startup/CMakeFiles/startup.dir/rule
+.PHONY : src/startup/CMakeFiles/startup.dir/rule
 
-# Build rule for target.
-nrip2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nrip2
-.PHONY : nrip2
-
-# fast build rule for target.
-nrip2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nrip2.dir/build.make CMakeFiles/nrip2.dir/build
-.PHONY : nrip2/fast
-
-#=============================================================================
-# Target rules for targets named startup
-
-# Build rule for target.
-startup: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startup
+# Convenience name for target.
+startup: src/startup/CMakeFiles/startup.dir/rule
 .PHONY : startup
 
 # fast build rule for target.
 startup/fast:
-	$(MAKE) $(MAKESILENT) -f src/startup/CMakeFiles/startup.dir/build.make src/startup/CMakeFiles/startup.dir/build
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f src/startup/CMakeFiles/startup.dir/build.make src/startup/CMakeFiles/startup.dir/build
 .PHONY : startup/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+startup.o: startup.cpp.o
+.PHONY : startup.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nrip2.dir/build.make CMakeFiles/nrip2.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+startup.cpp.o:
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f src/startup/CMakeFiles/startup.dir/build.make src/startup/CMakeFiles/startup.dir/startup.cpp.o
+.PHONY : startup.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+startup.i: startup.cpp.i
+.PHONY : startup.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nrip2.dir/build.make CMakeFiles/nrip2.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+startup.cpp.i:
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f src/startup/CMakeFiles/startup.dir/build.make src/startup/CMakeFiles/startup.dir/startup.cpp.i
+.PHONY : startup.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+startup.s: startup.cpp.s
+.PHONY : startup.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nrip2.dir/build.make CMakeFiles/nrip2.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+startup.cpp.s:
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(MAKE) $(MAKESILENT) -f src/startup/CMakeFiles/startup.dir/build.make src/startup/CMakeFiles/startup.dir/startup.cpp.s
+.PHONY : startup.cpp.s
 
 # Help Target
 help:
@@ -174,11 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... nrip2"
 	@echo "... startup"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... startup.o"
+	@echo "... startup.i"
+	@echo "... startup.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/gavinsimpson/Documents/dev/cmake-example-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

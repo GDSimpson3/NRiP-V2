@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nrip2.dir/src/main.cpp.o"
   "CMakeFiles/nrip2.dir/src/main.cpp.o.d"
-  "CMakeFiles/nrip2.dir/src/math.cpp.o"
-  "CMakeFiles/nrip2.dir/src/math.cpp.o.d"
   "nrip2"
   "nrip2.pdb"
 )

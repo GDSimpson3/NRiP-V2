@@ -2,9 +2,9 @@
 #include <iostream>
 using namespace std;
 
-#include "math.hpp"
-// #include "startup/startup.hpp"
+// #include "math.hpp"
+#include "startup.hpp"
 
 int main() {
-    cout << add(2, 3) << "\n";
+    cout << welcomeMessage(2, 3) << "\n";
 }

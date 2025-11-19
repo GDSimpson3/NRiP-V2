@@ -1,3 +1,6 @@
 /Users/gavinsimpson/Documents/dev/cmake-example-main/build/CMakeFiles/nrip2.dir
 /Users/gavinsimpson/Documents/dev/cmake-example-main/build/CMakeFiles/edit_cache.dir
 /Users/gavinsimpson/Documents/dev/cmake-example-main/build/CMakeFiles/rebuild_cache.dir
+/Users/gavinsimpson/Documents/dev/cmake-example-main/build/src/startup/CMakeFiles/startup.dir
+/Users/gavinsimpson/Documents/dev/cmake-example-main/build/src/startup/CMakeFiles/edit_cache.dir
+/Users/gavinsimpson/Documents/dev/cmake-example-main/build/src/startup/CMakeFiles/rebuild_cache.dir
