@@ -7,6 +7,7 @@ using namespace std;
 
 #include "startup.hpp"
 #include "inputProcessor.hpp"
+#include "fxCompute.hpp"
 
 // NOTE: I KNOW I WON'T KNOW A THING ABT THIS PROGRAM IN 3 WEEKS TIME, HENCE I'VE ADDED A SHITLOAD OF ANNOTATIONS THROUGHT IT
 
@@ -16,16 +17,9 @@ int main() {
 
     vector<vector<string>> inputProcessed = inputProcessor();
 
-    cout << "Terms:\n";
-    for (vector<string> row : inputProcessed)
-    {
-        cout << "[ ";
-        for (string cell : row)
-        {
-            cout << "\"" << cell << "\" ";
-        }
-        cout << "]\n";
-    }
+    int FX = computeFX(inputProcessed, 3);
+
+    cout << FX;
 
     return 0;
 }
