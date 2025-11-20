@@ -12,10 +12,11 @@ set(CMAKE_CXX_STANDARD 20)
 add_subdirectory(src/startup)
 add_subdirectory(src/inputProcessor)
 add_subdirectory(src/fxCompute)
+add_subdirectory(src/differentiate)
 
 
 # Add the executable
 add_executable(${EXEC} src/main.cpp)
 
 # Link modules into the executable
-target_link_libraries(${EXEC} PRIVATE startup inputProcessor fxCompute)
+target_link_libraries(${EXEC} PRIVATE startup inputProcessor fxCompute differentiate)

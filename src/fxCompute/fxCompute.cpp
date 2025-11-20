@@ -33,11 +33,6 @@ int computeFX(vector<vector<string>> polynomial, int x)
         cout << "EXP " << exponentComponent << "\n";
 
         FXSum += (Coefficient*exponentComponent);
-
-        // for (string cell : row)
-        // {
-        //     cout << "\"" << cell << "\" ";
-        // }
         
     }
 
