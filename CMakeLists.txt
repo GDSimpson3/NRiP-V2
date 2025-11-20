@@ -13,10 +13,11 @@ add_subdirectory(src/startup)
 add_subdirectory(src/inputProcessor)
 add_subdirectory(src/fxCompute)
 add_subdirectory(src/differentiate)
+add_subdirectory(src/newtonRaphsonIteration)
 
 
 # Add the executable
 add_executable(${EXEC} src/main.cpp)
 
 # Link modules into the executable
-target_link_libraries(${EXEC} PRIVATE startup inputProcessor fxCompute differentiate)
+target_link_libraries(${EXEC} PRIVATE startup inputProcessor fxCompute differentiate newtonRaphsonIteration)

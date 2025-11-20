@@ -9,6 +9,7 @@ using namespace std;
 #include "inputProcessor.hpp"
 #include "fxCompute.hpp"
 #include "differentiate.hpp"
+#include "newtonRaphsonIteration.hpp"
 
 // NOTE: I KNOW I WON'T KNOW A THING ABT THIS PROGRAM IN 3 WEEKS TIME, HENCE I'VE ADDED A SHITLOAD OF ANNOTATIONS THROUGHT IT
 
@@ -46,6 +47,8 @@ int main()
         }
         cout << "]\n";
     }
+
+    int iterationOne = newtonRaphsonIteration(inputProcessed,12);
 
     return 0;
 }
