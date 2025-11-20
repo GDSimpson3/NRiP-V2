@@ -14,7 +14,7 @@ add_subdirectory(src/inputProcessor)
 
 
 # Add the executable
-add_executable(nrip2 src/main.cpp)
+add_executable(${EXEC} src/main.cpp)
 
 # Link modules into the executable
 target_link_libraries(${EXEC} PRIVATE startup inputProcessor)
