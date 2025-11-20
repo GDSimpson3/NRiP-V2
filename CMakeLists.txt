@@ -10,10 +10,11 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Add modules
 add_subdirectory(src/startup)
+add_subdirectory(src/inputProcessor)
 
 
 # Add the executable
 add_executable(nrip2 src/main.cpp)
 
 # Link modules into the executable
-target_link_libraries(${EXEC} PRIVATE startup)
+target_link_libraries(${EXEC} PRIVATE startup inputProcessor)
