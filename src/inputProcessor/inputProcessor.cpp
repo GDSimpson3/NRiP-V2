@@ -37,7 +37,7 @@ vector<vector<string>> inputProcessor()
         if (rawPolyNomial[i] != ' ')
         { // remove all white spaces
 
-            cout << rawPolyNomial[i] << "THE TERMMM \n";
+            // cout << rawPolyNomial[i] << "THE TERMMM \n";
 
             if (i == rawPolyNomial.size() - 1)
             {

@@ -7,34 +7,34 @@
 
 using namespace std;
 
-int computeFX(vector<vector<string>> polynomial, int x)
+double computeFX(vector<vector<string>> polynomial, double x)
 {
 
-    int FXSum = 0;
+    double FXSum = 0;
 
     for (vector<string> row : polynomial)
     {
-       
-        cout << row.front() << row.back() << "\n";
 
+        // cout << row.front() << row.back() << "\n";
 
         // integers
 
-        int Coefficient = stoi(row.front());
-        int Exponent = stoi(row.back());
+        float Coefficient = stoi(row.front());
+        float Exponent = stoi(row.back());
         // Exponent Logic
 
-        int exponentComponent = 1;
+        double exponentComponent = 1;
         for (int i = Exponent; i > 0; i--)
         {
             exponentComponent *= x;
         }
 
-        cout << "EXP " << exponentComponent << "\n";
+        // cout << "EXP " << exponentComponent << "\n";
 
-        FXSum += (Coefficient*exponentComponent);
-        
+        FXSum += (Coefficient * exponentComponent);
     }
 
     return FXSum;
 }
+
+// REMEMBER TO KEEP ALL THE DATA TYPES AS DOUBLE

@@ -5,4 +5,4 @@
 
 using namespace std;
 
-int newtonRaphsonIteration(vector<vector<string>>, int);
+double newtonRaphsonIteration(vector<vector<string>>, double);

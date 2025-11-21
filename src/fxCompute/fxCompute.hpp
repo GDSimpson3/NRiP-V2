@@ -5,4 +5,4 @@
 
 using namespace std;
 
-int computeFX(vector<vector<string>>, int);
+double computeFX(vector<vector<string>>, double);
